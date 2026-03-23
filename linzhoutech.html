@@ -245,6 +245,14 @@
         }
         .nav a:hover::after {
             width: 100%;
+            }
+        ..nav a.active{
+    color: var(--primary);
+}
+
+.nav a.active::after{
+    width:100%;
+}
         }
         .contact-nav {
             display: flex;
@@ -621,6 +629,97 @@
         }
 
         /* 动画效果 */
+        /* 联系我们模块 */
+
+.contact-card{
+    background:#fff;
+    padding:50px;
+    border-radius:14px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    max-width:1000px;
+    margin:auto;
+}
+
+/* 左右布局 */
+.contact-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.contact-info{
+    flex:1;
+}
+
+.info-item{
+    display:flex;
+    gap:16px;
+    margin-bottom:22px;
+}
+
+.info-item i{
+    color:#0052FF;
+    font-size:20px;
+    margin-top:4px;
+}
+
+.info-item strong{
+    display:block;
+    font-size:16px;
+}
+
+.info-item p{
+    color:#666;
+    margin-top:3px;
+}
+
+.qrcode-area{
+    display:flex;
+    gap:35px;
+}
+
+.qr-box{
+    text-align:center;
+background:#fff;
+padding:15px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.qr-box img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.qr-box img:hover{
+    transform:scale(1.08);
+}
+
+.qr-box span{
+    display:block;
+    margin-top:10px;
+    font-size:13px;
+    color:#666;
+}
+
+@media (max-width:768px){
+
+    .contact-wrapper{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .qrcode-area{
+        justify-content:center;
+        margin-top:25px;
+    }
+
+}
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -682,7 +781,7 @@
         <div class="container flex">
             <div class="about-content">
                 <h2>杭州麟洲科技有限公司</h2>
-                <p>核心团队成员均来自世界500强及国内龙头企业，累计20年以上制造与数字化转型实战经验，深度服务能源制造、工业制造、装备制造、零售、生物医疗等多领域。</p>
+                <p>核心团队成员均来自世界500强及国内龙头企业，均具有20年以上制造与数字化转型实战经验，深度服务能源制造、工业制造、装备制造、消费零售、生物医疗等多领域。</p>
                 <p>我们以「技术赋能效率，数据驱动价值」为核心使命，为国际级工业龙头、国内千亿级企业、中小企业提供一体化智能制造解决方案，推动企业可持续发展。</p>
                 <div class="vision">
                     <h3>使命</h3>
@@ -700,7 +799,7 @@
     <!-- 核心价值 -->
     <section class="value section" id="value">
         <div class="container">
-            <h2 class="section-title">核心价值 · 为客户创造可量化的增长</h2>
+            <h2 class="section-title">核心价值 · 通过智能技术的应用为客户创造可量化的全方位收益</h2>
             <div class="flex">
                 <div class="card">
                     <h3><i class="fas fa-chart-line"></i> 降本增效</h3>
@@ -729,7 +828,7 @@
     <!-- 产品服务 - 添加场景图 -->
     <section class="product section" id="product">
         <div class="container">
-            <h2 class="section-title">产品服务 · 技术为基 覆盖全场景需求</h2>
+            <h2 class="section-title">产品服务 · 技术为基 覆盖全场景需求 · 企业智能化与数字化转型战略咨询 · 智能技术应用及数字化转型专题培训</h2>
             <!-- 产品服务场景大图 -->
             <div class="product-scene">
                 <img src="images/jushenzhinengzhizao (2).png" alt="具身智能智能制造场景">
@@ -800,30 +899,65 @@
         </div>
     </section>
 
-    <!-- 联系我们 -->
-    <section class="contact section" id="contact">
-        <div class="container">
-            <h2 class="section-title">联系我们 · 携手共建智能制造未来</h2>
-            <div class="contact-card">
-                <h3>期待与您合作</h3>
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>浙江杭州市滨江区海创园北楼</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>18668129982</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>54497233@qq.com</span>
+   <!-- 联系我们 -->
+<section class="contact section" id="contact">
+    <div class="container">
+
+        <h2 class="section-title">联系我们 · 携手共建智能制造未来</h2>
+
+        <div class="contact-card">
+
+            <h3>期待与您合作</h3>
+
+            <div class="contact-info">
+
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>地址</strong>
+                        <p>浙江省杭州市滨江区海创基地北2楼</p>
                     </div>
                 </div>
-                <a href="tel:18668129982" class="btn">立即致电</a>
+
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>电话</strong>
+                        <p>18668129982</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fab fa-weixin"></i>
+                    <div>
+                        <strong>微信</strong>
+                        <p>yl54497233</p>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- 二维码区域 -->
+            <div class="qrcode-area">
+
+                <div class="qr-box">
+                    <img src="images/weixinhao.jpg" >
+                    <span>扫码添加微信</span>
+                </div>
+
+                <div class="qr-box">
+                    <img src="images/gongzhonghao.jpg" >
+                    <span>公众号二维码</span>
+                </div>
+
+            </div>
+
+            <a href="tel:18668129982" class="btn">立即致电</a>
+
         </div>
-    </section>
+
+    </div>
+</section>
 
     <!-- 页脚 -->
     <footer class="footer">
@@ -864,6 +998,34 @@
                 this.style.boxShadow = "0 4px 12px rgba(0,82,255,0.2)";
             }
         }
+        // 导航栏滚动高亮
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(a => {
+        a.classList.remove("active");
+
+        if (a.getAttribute("href") === "#" + current) {
+            a.classList.add("active");
+        }
+    });
+
+});
     </script>
 </body>
 </html>
